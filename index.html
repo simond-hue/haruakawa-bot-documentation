@@ -27,9 +27,9 @@
         </header>
         <section class="container-fluid main">
             <div class="row">
-                <!--<footer class="felso-lec">Fejlesztő: Simon Dániel (Nidasimno)</footer>-->
+                <footer class="felso-lec">Fejlesztő: Simon Dániel (Nidasimno)</footer>
             </div>
-            <div class="row">
+            <div class="row content-container">
                 <div class="col-md-2 d-block sidebar">
                     <a href="#">Leírás</a>
                     <button class="dropdown-btn">Zene bot 
@@ -49,7 +49,7 @@
                         <a href="#Shuffle">Shuffle</a>
                         <a href="#Clear">Clear</a>
                         <a href="#Queue">Queue</a>
-                        <a href="#Prev">Prev</a>
+                        <a href="#Previous">Previous</a>
                         <a href="#DJRole">DJ Role-ok</a>
                         
                     </div>
@@ -150,6 +150,176 @@
                                     <li>summon</li>
                                     <li>connect</li>
                                     <li>join</li>
+                                </ul>
+                            </p>
+                        </div>
+                        <div id = "Disconnect">
+                            <h2>
+                                Disconnect
+                            </h2>
+                            <p class="description">
+                                Ezzel a paranccsal a felhasználó a botot le tudja csatlakoztatni az adott voice channel-ről. Csak akkor tudja a felhasználó lecsatlakoztatni a botot, ha 
+                                a bottal egy voice channel-en tartózkodik.
+                            </p>
+                            <p class="description">
+                                A parancsot a következő alias-okkal érhetjük el:
+                                <ul>
+                                    <li>disconnect</li>
+                                    <li>dc</li>
+                                    <li>fuckoff</li>
+                                </ul>
+                            </p>
+                        </div>
+                        <div id = "Play">
+                            <h2>
+                                Play
+                            </h2>
+                            <p class="description">
+                                Ezzel a paranccsal a felhasználó le tudja játszani a paraméterként megadott zenét. Ha a bot nincsen voice channel-en a parancs kiadásakkor, akkor lefuttatja
+                                automatikusan a <i>summon</i> parancsot. Paraméterként egyelőre YouTube linket képes feldolgozni egyedül, viszont ez a link lehet csak egy videó, illetve 
+                                egy egész lejátszási lista is.
+                            </p>
+                            <p class="description">
+                                A parancsot a következő alias-okkal érhetjük el:
+                                <ul>
+                                    <li>play</li>
+                                    <li>p</li>
+                                </ul>
+                            </p>
+                        </div>
+                        <div id = "NP">
+                            <h2>
+                                Now Playing
+                            </h2>
+                            <p class="description">
+                                Ezzel a paranccsal a felhasználó le tudja kérdezni a jelenlegi zenét, amit éppen játszik a bot. Ezen kívül a bot megadja, hogy éppen hol tart a zenében, illetve
+                                egy elérési linket is csatol mellé.
+                            </p>
+                            <p class="description">
+                                A parancsot a következő alias-okkal érhetjük el:
+                                <ul>
+                                    <li>nowplaying</li>
+                                    <li>np</li>
+                                </ul>
+                            </p>
+                        </div>
+                        <div id = "Skip">
+                            <h2>
+                                Skip
+                            </h2>
+                            <p class="description">
+                                Ezzel a paranccsal a felhasználó át tudja ugrani a jelenlegi zenét, és a következőt elindítani a bot lejátszási listájáról (ha van). Ha a felhasználónak nincs DJ Role-ja, vagy
+                                adminisztrátori joga a szerveren, akkor a bot megvárja, amíg a többi hasonló jogkörrel rendelkező felhasználók fele a voice channel-en beírja a skip parancsot. 
+                            </p>
+                            <p class="description">
+                                A parancsot a következő alias-okkal érhetjük el:
+                                <ul>
+                                    <li>skip</li>
+                                    <li>s</li>
+                                </ul>
+                            </p>
+                        </div>
+                        <div id = "Loop">
+                            <h2>
+                                Loop
+                            </h2>
+                            <p class="description">
+                                Ezzel a paranccsal a felhasználó a jelenlegi zenét be és ki tudja kapcsolni a loop funkciót a szerveren. Ez azt jelenti, hogy a bot folyamatosan 
+                                ugyanazt a zenét fogja lejátszani addig, amíg ez a funkció be van kapcsolva. 
+                            </p>
+                            <p class="description">
+                                A parancsot a következő alias-okkal érhetjük el:
+                                <ul>
+                                    <li>loop</li>
+                                    <li>l</li>
+                                </ul>
+                            </p>
+                        </div>
+                        <div id = "Shuffle">
+                            <h2>
+                                Shuffle
+                            </h2>
+                            <p class="description">
+                                Ezzel a paranccsal a felhasználó a jelenlegi lejátszási listából egy végtelenített véletlenszerű lejátszási listát hoz létre. Az zenék a lejátszási listán fixen
+                                megmaradnak és minden egyes zene után egy véletlenszerűen generált szám alapján tölti be a következő elemet.
+                            </p>
+                            <p class="description">
+                                A parancsot a következő alias-okkal érhetjük el:
+                                <ul>
+                                    <li>shuffle</li>
+                                    <li>shuff</li>
+                                </ul>
+                            </p>
+                        </div>
+                        <div id = "Clear">
+                            <h2>
+                                Clear
+                            </h2>
+                            <p class="description">
+                                Ezzel a paranccsal a felhasználó a jelenlegi lejátszási listát képes kiüríteni, anélkül, hogy le kelljen csatlakoztatni a botot a voice channel-ről.
+                                Ha kiadjuk ezt a parancsot, a jelenlegi zenét nem állítja le.
+                            </p>
+                            <p class="description">
+                                A parancsot a következő alias-okkal érhetjük el:
+                                <ul>
+                                    <li>clear</li>
+                                    <li>c</li>
+                                </ul>
+                            </p>
+                        </div>
+                        <div id = "Queue">
+                            <h2>
+                                Queue
+                            </h2>
+                            <p class="description">
+                                Ezzel a paranccsal a felhasználó a jelenlegi lejátszási listának az elemeit tudja lekérdezni. Oldalanként maximum <i>10</i> elem jelenik meg, ezek között pedig
+                                a megfelelő emoji-kra kattintva lehet navigálni:
+                                <ul>
+                                    <li>dupla nyíl balra - legelső oldal</li>
+                                    <li>balra nyíl - előző oldal</li>
+                                    <li>jobbra nyíl - következő oldal</li>
+                                    <li>dupla jobbra nyíl - utolsó oldal</li>
+                                </ul>
+                            </p>
+                            <p class="description">
+                                A parancsot a következő alias-okkal érhetjük el:
+                                <ul>
+                                    <li>queue</li>
+                                    <li>q</li>
+                                </ul>
+                            </p>
+                        </div>
+                        <div id = "Previous">
+                            <h2>
+                                Previous
+                            </h2>
+                            <p class="description">
+                                Ezzel a paranccsal a felhasználó a <i>skip</i>-hez hasonlóan át tudja ugrani a zenét, viszont ha ezt a parancsot adjuk ki, akkor az előzőleg lejátszott zenét tölti be a bot.
+                                Maximum <i>100</i> zenét lehet egyszerre visszafele ugrani, ugyanis annyit tud maximum eltárolni a bot.
+                            </p>
+                            <p class="description">
+                                A parancsot a következő alias-okkal érhetjük el:
+                                <ul>
+                                    <li>previous</li>
+                                    <li>prev</li>
+                                </ul>
+                            </p>
+                        </div>
+                        <div id = "DJRole">
+                            <h2>
+                                DJ Role-ok (setdjrole)
+                            </h2>
+                            <p class="description">
+                                A botnak megadható DJ Role is, amelyet minden szerveren külön eltárol. Paraméterként egy role nevet vár, ami bármilyen szöveg lehet. Ha a role nem létezik,
+                                akkor létrehozza azt, ha van hozzá joga mind a botnak, mind a felhasználónak. Ha már létezik a szerveren egy ilyen role, akkor a parancs beírásával felülírja
+                                azt.
+                            </p>
+                            <p class="description">
+                                A parancsot a következő alias-okkal érhetjük el:
+                                <ul>
+                                    <li>setdjrole</li>
+                                    <li>setdj</li>
+                                    <li>sdj</li>
                                 </ul>
                             </p>
                         </div>

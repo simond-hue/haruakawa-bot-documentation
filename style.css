@@ -37,16 +37,27 @@ body::-webkit-scrollbar{
 }
 
 .sidebar{
-    background-color: aqua;
+    background-color: #161616;
     overflow-x: hidden;
     padding: 0;
     display: inline-block;
+    border-right: 5pt solid #b32525;
+    border-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #b32525 48%, rgba(255, 255, 255, 0) 100%);
+    border-image-slice: 1;
 }
 
 .content{
     padding: 1vw;
-    background-color: thistle;
+    background-color: #161616;
     height: fit-content;
+    font-family: 'Average', serif;
+    color: #CDCDCD;
+    padding-left: 0.5vw;
+}
+
+.content h2{
+    font-family: 'Spectral', serif;
+    font-weight: bold;
 }
 
 .icon{
@@ -131,5 +142,9 @@ body::-webkit-scrollbar{
     .sidebar{
         display: block;
         width: 100%;
+        border-right: none;
+        border-bottom: 1pt solid #b32525;
+        border-image: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, #b32525 48%, rgba(255, 255, 255, 0) 100%);
+        border-image-slice: 1;
     }
 }

@@ -22,6 +22,7 @@ body::-webkit-scrollbar{
     vertical-align: middle;
     font-family: 'Cairo', sans-serif;
     margin-left: 15pt;
+    text-align: center;
 }
 
 .title h1{
@@ -69,7 +70,7 @@ body::-webkit-scrollbar{
 
 .sidebar a, .dropdown-btn {
     font-family: 'Spectral', serif;
-    padding: 1vw;
+    padding: 15pt;
     text-decoration: none;
     font-size: 18pt;
     color: #ABABAB;
@@ -133,6 +134,24 @@ body::-webkit-scrollbar{
 
 .description{
     text-align: justify;
+}
+
+.invite-link{
+    color: #b32525;
+    text-decoration: none;
+}
+
+.invite-link:hover{
+    color: #ABABAB;
+    text-decoration: underline;
+}
+
+.fa-caret-right.animate{
+    -moz-transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
 }
 
 @media (max-width: 768px) {

@@ -7,8 +7,14 @@ $(document).ready(function(){
     for (var i = 0; i < dropdown.length; i++) {
         $(dropdown[i]).click(function() {
             $(this).toggleClass("active");
-            if($(this).hasClass("active")) activeDropdown = $(this);
-            else activeDropdown = null;
+            if($(this).hasClass("active")){
+                activeDropdown = $(this);
+                $($(this).find('.fa')[0]).removeClass('fa-caret-right').addClass('fa-caret-down').addClass('animate');
+            } 
+            else{
+                activeDropdown = null;
+                $($(this).find('.fa')[0]).removeClass('fa-caret-down').addClass('fa-caret-right').removeClass('animate');
+            }
 
             $(this).next('.dropdown-container').toggleClass("display");
             if($(this).next('.dropdown-container').hasClass("display")) activeDropdownContainer = $(this).next('.dropdown-container');

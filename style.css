@@ -64,7 +64,6 @@ body::-webkit-scrollbar{
     line-height: 40px;
     padding: 0;
     font-size: 18pt;
-    background-color: magenta;
 }
 
 .sidebar a, .dropdown-btn {

@@ -3,6 +3,7 @@ body{
     -ms-overflow-style: none;
     overflow-x: hidden;
     scrollbar-width: none;
+    max-width: 100%;
 }
 
 body::-webkit-scrollbar{
@@ -13,13 +14,14 @@ body::-webkit-scrollbar{
     color: #b32525;
     padding: 1vw;
     width: 100%;
+    margin: 0 0 0 0;
 }
 
 .title{
     display: inline-block;
     vertical-align: middle;
     font-family: 'Cairo', sans-serif;
-    margin-left: 1vw;
+    margin-left: 15pt;
 }
 
 .title h1{
@@ -47,12 +49,11 @@ body::-webkit-scrollbar{
 }
 
 .content{
-    padding: 1vw;
+    padding: 15pt;
     background-color: #161616;
     height: fit-content;
     font-family: 'Average', serif;
     color: #CDCDCD;
-    padding-left: 0.5vw;
 }
 
 .content h2{
@@ -136,7 +137,7 @@ body::-webkit-scrollbar{
 
 @media (max-width: 768px) {
     .col-xs-1, .title{
-        margin: 0 auto;
+        margin: 0 auto 0 auto;
     }
     .sidebar{
         display: block;

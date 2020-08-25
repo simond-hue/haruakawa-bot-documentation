@@ -1,0 +1,135 @@
+body{
+    background-color: #1c1c1c;
+    -ms-overflow-style: none;
+    overflow-x: hidden;
+    scrollbar-width: none;
+}
+
+body::-webkit-scrollbar{
+    display: none;
+}
+
+.top-bar{
+    color: #b32525;
+    padding: 1vw;
+    width: 100%;
+}
+
+.title{
+    display: inline-block;
+    vertical-align: middle;
+    font-family: 'Cairo', sans-serif;
+    margin-left: 1vw;
+}
+
+.title h1{
+    font-size: auto;
+}
+
+.bot-pfp{
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.bot-pfp img{
+    border: 5px solid white;
+    border-radius: 50%;
+}
+
+.sidebar{
+    background-color: aqua;
+    overflow-x: hidden;
+    padding: 0;
+    display: inline-block;
+}
+
+.content{
+    padding: 1vw;
+    background-color: thistle;
+    height: fit-content;
+}
+
+.icon{
+    line-height: 40px;
+    padding: 0;
+    font-size: 18pt;
+    background-color: magenta;
+}
+
+.sidebar a, .dropdown-btn {
+    font-family: 'Spectral', serif;
+    padding: 1vw;
+    text-decoration: none;
+    font-size: 18pt;
+    color: #ABABAB;
+    display: block;
+    border: none;
+    background: none;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    outline: none;
+    background-color: #161616;
+}
+
+.sidebar a:hover, .dropdown-btn:hover {
+    color: #f1f1f1;
+    background-color: #b32525;
+}
+
+.dropdown-container {
+    display: block;
+    max-height: 0;
+    -webkit-transition: max-height 0.8s;
+	-moz-transition: max-height 0.8s;
+	transition: max-height 0.8s;
+    overflow: hidden;
+    background-color: #161616;
+}
+
+.dropdown-btn:focus{
+    outline: none;
+}
+
+.active {
+    background-color: #b32525;
+    color: white;
+}
+
+.felso-lec{
+    color: #676767;
+    text-align: center;
+    font-size: 10pt;
+    font-style: italic;
+    margin: 0 auto;
+    float: right;
+}
+
+.display{
+    -webkit-transition: max-height 0.4s;
+	-moz-transition: max-height 0.4s;
+    transition: max-height 0.4s;
+    height: auto;
+    max-height: 2000px;
+    opacity: 1;
+}
+
+.main{
+    position: relative;
+    height: fit-content;
+    width: fit-content;
+}
+
+.description{
+    text-align: justify;
+}
+
+@media (max-width: 768px) {
+    .col-xs-1, .title{
+        margin: 0 auto;
+    }
+    .sidebar{
+        display: block;
+        width: 100%;
+    }
+}

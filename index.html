@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="HU">
+    <head>
+        <title>Harukawa Maki Bot Dokumentáció</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta charset="UTF-8">
+        <meta name="description" content="Harukawa Maki Discord bot parancsainak dokumentációja">
+        <meta name="keywords" content="Discord, JavaScript, NodeJS, Bot, Music, Commands, Parancsok">
+        <meta name="author" content="Nidasimno">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <link type="text/css" rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Cairo&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Spectral:wght@200&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <header class="container-fluid top-bar">
+            <div class="row">
+                <div class="bot-pfp col-xs-1 d-flex flex-xs-0 offset-1">
+                    <img  class="img-fluid" src="https://cdn.discordapp.com/avatars/720426327869751298/120b85dcf154207add13198fdd2b8dbb.png?size=128">
+                </div>
+                <div class="title col-xs-11 align-self-center">
+                    <h1>Harukawa Maki bot</h1>
+                </div>
+            </div>
+        </header>
+        <section class="container-fluid main">
+            <div class="row">
+                <!--<footer class="felso-lec">Fejlesztő: Simon Dániel (Nidasimno)</footer>-->
+            </div>
+            <div class="row">
+                <div class="col-md-2 d-block sidebar">
+                    <a href="#">Leírás</a>
+                    <button class="dropdown-btn">Zene bot 
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-container">
+                        <a href="#zene">Bevezető</a>
+                        <a href="#Bassboost">Bassboost</a>
+                        <a href="#Daycore">Daycore</a>
+                        <a href="#Nightcore">Nightcore</a>
+                        <a href="#Summon">Summon</a>
+                        <a href="#Disconnect">Disconnect</a>
+                        <a href="#Play">Play</a>
+                        <a href="#NP">Now Playing</a>
+                        <a href="#Skip">Skip</a>
+                        <a href="#Loop">Loop</a>
+                        <a href="#Shuffle">Shuffle</a>
+                        <a href="#Clear">Clear</a>
+                        <a href="#Queue">Queue</a>
+                        <a href="#Prev">Prev</a>
+                        <a href="#DJRole">DJ Role-ok</a>
+                        
+                    </div>
+                </div>
+                <div class="col-md-10 content">
+                    <div id="leiras">
+                        <h2>
+                            Leírás
+                        </h2>
+                        <p class="description">
+                            Ez a weboldal mutatja be a botot és a parancsait. A bot maga egy iskolai projectként indult, mára már jobban kinőtte magát. Az alapkoncepciót a már meglévő botok
+                            adták, azok alapján írom a sajátomat, ami körülbelül azt a szintet produkálja, mint a többi, de nyilván magyarul és egy picit másképp, ahogy jónak látom. Jelenleg
+                            a bot még kevés funkcióval rendelkezik, igyekszem ezt bővíteni az idő során, amire éppen van igény, vagy amit éppen kitalálok. 
+                        </p>
+                        <p class="description">
+                            Akármilyen bug esetén fel lehet velem venni a kapcsolatot mind Discord-on <i>(Nidasimnowo#7104)</i> vagy esetleg e-mail-en <i>(simon.dani420@gmail.com)</i>, de 
+                            szívesen fogadok bug report-okat vagy PR-eket GitHub-on.
+                        </p>
+                        <p class="description">
+                            Az oldal legfőbb célja a parancsok leírása. Ez a megoldás egyszerűbbnek és szebb megoldásnak tűnt, mint Discord-on belül minden egyes parancs leírását 
+                            egy üzenetbe írni.
+                        </p>
+                        <p class="description">
+                            A bot prefixe a <b>maki-</b> szótag. Csak olyan üzenetekre reagál a bot, amelyek ezzel a szöveggel kezdődnek. Egy parancs meghívására pl: <i>maki-help</i>.
+                        </p>
+                    </div>
+                    <div id="zene">
+                        <h2>
+                            Zene bot
+                        </h2>
+                        <p class="description">
+                            A zene bot része a legjelentősebb a botnak. Ide tartozik minden <i>music</i> típusú parancs. Ezeket a parancsokat <b>CSAK</b> és kizárólag voice channel-en tartózkodva
+                            lehet őket meghívni. Erről, illetve minden hibáról a bot hibaüzenetet küld a megfelelő text channel-re.
+                        </p>
+                        <div id = "Bassboost">
+                            <h2>
+                                Bassboost
+                            </h2>
+                            <p class="description">
+                                Ezzel a paranccsal a user képes a jelenlegi zenének az alacsony frekvenciáját hangosabbra venni. A parancsot nem egyből hajtja végre a bot, ha jeleneleg van
+                                van zene a lejátszóban, hanem a következő zenétől kezdve rakja rá az effektet. 
+                            </p>
+                            <p class="description">
+                                A parancsot a következő alias-okkal érhetjük el:
+                                <ul>
+                                    <li>bassboost</li>
+                                    <li>bb</li>
+                                </ul>
+                            </p>
+                        </div>
+                        <div id = "Daycore">
+                            <h2>
+                                Daycore
+                            </h2>
+                            <p class="description">
+                                A parancs a <i>daycore</i> effektet alkalmazza a szerveren. Ez a már elég nagy népszerűségnek örvendő daycore zenék mintájára csinál a zenéből daycore verziót.
+                            </p>
+                            <p class="description">
+                                A daycore egy olyan műfaj, amiben a zenének a sebességét alacsonyabbra vesznek, illetve a zenében minden egyes frekvenciát eltolnak egy oktávval.
+                            </p>
+                            <p class="description">
+                                A parancsot a következő alias-okkal érhetjük el:
+                                <ul>
+                                    <li>daycore</li>
+                                    <li>dayc</li>
+                                </ul>
+                            </p>
+                        </div>
+                        <div id = "Nightcore">
+                            <h2>
+                                Nightcore
+                            </h2>
+                            <p class="description">
+                                
+                            </p>
+                        </div>
+                        <div id = "Bassboost">
+                            <h2>
+                                Bassboost
+                            </h2>
+                            <p class="description">
+                                
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+        <script src="./eventhandlers.js"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    </body>
+</html>

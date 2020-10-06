@@ -168,12 +168,13 @@ body::-webkit-scrollbar{
     }
 }
 
-a{
+.description a{
     color: #b32525;
     text-decoration: none;
 }
 
-a:visited{
+.description a:visited{
     color: #b32525;
     text-decoration: none;
 }
+

@@ -167,3 +167,13 @@ body::-webkit-scrollbar{
         border-image-slice: 1;
     }
 }
+
+a{
+    color: #b32525;
+    text-decoration: none;
+}
+
+a:visited{
+    color: #b32525;
+    text-decoration: none;
+}

@@ -92,9 +92,9 @@ body::-webkit-scrollbar{
 .dropdown-container {
     display: block;
     max-height: 0;
-    -webkit-transition: max-height 0.8s;
-	-moz-transition: max-height 0.8s;
-	transition: max-height 0.8s;
+    -webkit-transition: max-height 0.4s;
+	-moz-transition: max-height 0.4s;
+	transition: max-height 0.4s;
     overflow: hidden;
     background-color: #161616;
 }
